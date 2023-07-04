@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"> 
+    <title>MiniBrowser</title>
+</head>
+<body>
+    
+
+
+<script>
+    //Objetos: Representam coisas com multiplos atributos 
+    var aba1 = {
+        titulo: 'Titulo da aba 1',
+        url: 'https://www.globo.com/?utm_source=barraGCOM'
+    }
+    var aba2 = {
+        titulo: 'Titulo da aba 2',
+        url: 'https://valor.globo.com/?utm_source=globo.com&utm_medium=header'
+    }
+    //Entrada 
+    // Arrays: Listas de coisas
+    const abas = [
+    aba1,
+    aba2
+    ];
+    
+    
+    //Processamento
+    for (aba of  abas) {
+        console.log(aba.titulo);
+    //Output
+        var valorAtualDoHmtl= document.body.innerHTML;
+        document.body.innerHTML= valorAtualDoHmtl + `<li><a href="${aba.url}">  ${aba.titulo}<a/></li)`;
+    }  
+
+
+    
+
+
+
+
+    // O que tem em uma aba do navegador
+    //titulo
+    // url
+    //pagina de fato(html, css, javascript)
+
+
+</script>
+    
+
+</body>
+</html>
